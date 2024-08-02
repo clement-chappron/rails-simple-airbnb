@@ -1,0 +1,25 @@
+<section class="container">
+  <div>
+    <h1>All our Flats (<%= @flats.count %>)</h1>
+
+    <div class="row gap-4">
+      <% @flats.each do |flat| %>
+        <div class="card col-md-3 shadow p-0">
+          <div class="card-body bg-light">
+            <h3 class="card-title"><%= flat.name.capitalize %></h3>
+            <p class=""><%= flat.address.capitalize %></p>
+            <div class="d-flex">
+              <i class="fa-solid fa-user-group mt-1 me-2"></i><p class="me-3"><%= flat.number_of_guests %></p>
+              <i class="fa-solid fa-euro-sign mt-1 me-2"></i><p class="me-3"><%= flat.price_per_night %></p>
+            </div>
+
+          </div>
+          <div class="p-3">
+            <%= link_to 'More info', flat_path(flat.id), class: 'text-decoration-none' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</section>

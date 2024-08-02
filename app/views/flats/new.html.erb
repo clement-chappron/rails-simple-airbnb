@@ -1,0 +1,17 @@
+<section class="container">
+  <div class="col-md-6 bg-light mx-auto my-3 p-3">
+    <H1>Add a new flat</H1>
+
+    <%= simple_form_for(@flat) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :description %>
+    <%= f.input :number_of_guests %>
+    <%= f.input :price_per_night %>
+    <%= f.button :submit, class: 'btn btn-primary me-2' %>
+    <%= link_to 'Cancel', flats_path, class: 'btn btn-danger' %>
+
+    <% end %>
+
+  </div>
+</section>

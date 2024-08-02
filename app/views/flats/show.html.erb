@@ -1,0 +1,56 @@
+<div style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200'); height: 350px !important;"></div>
+  <div class="container">
+
+  <div class="row mb-3">
+    <div class="col-md-8">
+        <div class="p-3 bg-light mb-3 shadow rounded" style="margin-top: -60px;" >
+          <h1><%= @flat.name.capitalize %></h1>
+          <p class="fs-6"><%= @flat.address %></p>
+        </div>
+        <div class="p-3 bg-light mt-3 shadow rounded" style="margin-top: -60px;" >
+          <h3>A bit more about this</h3>
+          <p style="font-size: 14px;"><%= @flat.description %></p>
+          <div style="background-image: url(/assets/map.jpg); height: 300px; background-size: cover;"></div>
+        </div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-3 bg-light mb-3 shadow rounded" style="margin-top: -60px;" >
+        <h6>Book this place!</h6>
+        <form action="">
+          <div class="input-group">
+            <span class="input-group-text" id="start-date-label">From:</span>
+            <input type="text" class="form-control" placeholder="01/08/2024" aria-label="start-date" aria-describedby="start-date-label">
+          </div>
+          <div class="input-group mt-2">
+            <span class="input-group-text" id="end-date-label">To:</span>
+            <input type="text" class="form-control" placeholder="02/08/2024" aria-label="end-date" aria-describedby="start-date-label">
+          </div>
+          <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
+        </form>
+      </div>
+
+      <div class="p-3 bg-light mt-3 shadow rounded" style="margin-top: -60px;" >
+        <h3>Details</h3>
+        <div class="d-flex">
+          <p class="me-4"><%= @flat.number_of_guests %> people</p>
+          <p><%= @flat.price_per_night %>€</p>
+        </div>
+      </div>
+
+      <div class="p-3 bg-light mt-3 shadow rounded" style="margin-top: -60px;" >
+        <div class="d-flex me-auto">
+          <h6>Share</h6>
+          <div class="ms-auto">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-pinterest"></i>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    <%= link_to 'Back', flats_path %>
+  </div>
